@@ -86,7 +86,8 @@ namespace lcmath
 	int ceil(T number)
 	{
 		int inum = (int)number;
-		if (number == (float)inum) {
+		if (number == (float)inum)
+		{
 			return inum;
 		}
 		return inum + 1;
@@ -97,12 +98,43 @@ namespace lcmath
 	int floor(T number)
 	{
 		int t;
-		if(number < 0){
-			t=(int)number +(-1);
+		if (number < 0)
+		{
+			t = (int)number + (-1);
 			return t;
 		}
 		else return number;
 	}
 
+	// Finds absolute of number
+	template<typename T>
+	T abs(T number)
+	{
+		if (number < 0)
+		{
+			number = (-1) * number;
+		}
+		return number;
+	}
+
+	// Finds the biggest number
+	template<typename T>
+	T max(T number1, T number2)
+	{
+		if (number1 < number2)
+			return number2;
+		else
+			return number1;
+	}
+
+	// Finds the smallest number
+	template<typename T>
+	T min(T number1, T number2)
+	{
+		if (number1 > number2)
+			return number2;
+		else
+			return number1;
+	}
 
 }
