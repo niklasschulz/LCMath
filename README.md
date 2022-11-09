@@ -1,2 +1,2 @@
 # LCMath
-Light C++ math library
+Lightweight math library for C++
