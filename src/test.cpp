@@ -17,8 +17,8 @@ int	main()
 
 	lcmath::vector2i testvector1{3,2};
 	lcmath::vector2i testvector2{2,2};
-	++testvector2;
-	std::cout << testvector2 << std::endl;
+	testvector1 += testvector2;
+	std::cout << testvector1 << std::endl;
 	lcmath::vector2i testvector3 = testvector1 + testvector2;
 
 	std::cout << std::endl << testvector3.x << "  " << testvector3.y << std::endl;
