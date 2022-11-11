@@ -1,5 +1,5 @@
 # LCMath
-<div style="height:60px">
+<div>
 ![logo](img/logo.png#gh-dark-mode-only)
 ![logo](img/logo_black.png#gh-light-mode-only)
 <div>
