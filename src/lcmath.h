@@ -32,6 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #pragma once
 
+#include <ostream>
 namespace lcmath
 {
 	// Vector 2 int
@@ -70,6 +71,11 @@ namespace lcmath
 		bool operator==(vector2i& vec) const
 		{
 			return (x == vec.x && y == vec.y);
+		}
+
+		friend std::ostream& operator<<(std::ostream& out, const vector2i& vec){
+			out << vec.x << ", " << vec.y;
+			return out;
 		}
 	};
 
@@ -110,6 +116,12 @@ namespace lcmath
 		{
 			return (x == vec.x && y == vec.y);
 		}
+
+		friend std::ostream& operator<<(std::ostream& out, const vector2f& vec)
+		{
+			out << vec.x << ", " << vec.y;
+			return out;
+		}
 	};
 
 	// Vector 2 double
@@ -148,6 +160,12 @@ namespace lcmath
 		bool operator==(vector2d& vec) const
 		{
 			return (x == vec.x && y == vec.y);
+		}
+
+		friend std::ostream& operator<<(std::ostream& out, const vector2d& vec)
+		{
+			out << vec.x << ", " << vec.y;
+			return out;
 		}
 	};
 
@@ -192,6 +210,12 @@ namespace lcmath
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
 		}
+
+		friend std::ostream& operator<<(std::ostream& out, const vector3i& vec)
+		{
+			out << vec.x << ", " << vec.y << ", " << vec.z;
+			return out;
+		}
 	};
 
 	// Vector 3 float
@@ -235,6 +259,12 @@ namespace lcmath
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
 		}
+
+		friend std::ostream& operator<<(std::ostream& out, const vector3f& vec)
+		{
+			out << vec.x << ", " << vec.y << ", " << vec.z;
+			return out;
+		}
 	};
 
 	// Vector 3 double
@@ -277,6 +307,12 @@ namespace lcmath
 		bool operator==(vector3d& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
+		}
+
+		friend std::ostream& operator<<(std::ostream& out, const vector3d& vec)
+		{
+			out << vec.x << ", " << vec.y << ", " << vec.z;
+			return out;
 		}
 	};
 
@@ -325,6 +361,12 @@ namespace lcmath
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
 		}
+
+		friend std::ostream& operator<<(std::ostream& out, const vector4i& vec)
+		{
+			out << vec.x << ", " << vec.y << ", " << vec.z << ", " << vec.w;
+			return out;
+		}
 	};
 
 	// Vector 4 float
@@ -372,6 +414,12 @@ namespace lcmath
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
 		}
+
+		friend std::ostream& operator<<(std::ostream& out, const vector4f& vec)
+		{
+			out << vec.x << ", " << vec.y << ", " << vec.z << ", " << vec.w;
+			return out;
+		}
 	};
 
 	// Vector 4 double
@@ -418,6 +466,12 @@ namespace lcmath
 		bool operator==(vector4d& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
+		}
+
+		friend std::ostream& operator<<(std::ostream& out, const vector4d& vec)
+		{
+			out << vec.x << ", " << vec.y << ", " << vec.z << ", " << vec.w;
+			return out;
 		}
 	};
 
