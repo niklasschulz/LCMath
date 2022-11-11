@@ -14,4 +14,5 @@ int	main()
 	std::cout << lcmath::sin(12.56, 50) << std::endl;
 	std::cout << lcmath::cos(64) << std::endl;
 	std::cout << lcmath::lround(2147483688.6) << std::endl;
+
 }
