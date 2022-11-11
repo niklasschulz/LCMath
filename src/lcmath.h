@@ -184,5 +184,4 @@ namespace lcmath
 		}
 		return cos;
 	}
-
 }
