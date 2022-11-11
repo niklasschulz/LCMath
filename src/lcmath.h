@@ -82,6 +82,13 @@ namespace lcmath
 			return *this;
 		}
 
+		vector2i& operator--()
+		{
+			x--;
+			y--;
+			return *this;
+		}
+
 		bool operator==(vector2i& vec) const
 		{
 			return (x == vec.x && y == vec.y);
@@ -137,6 +144,13 @@ namespace lcmath
 		{
 			x++;
 			y++;
+			return *this;
+		}
+
+		vector2f& operator--()
+		{
+			x--;
+			y--;
 			return *this;
 		}
 
@@ -196,6 +210,13 @@ namespace lcmath
 		{
 			x++;
 			y++;
+			return *this;
+		}
+
+		vector2d& operator--()
+		{
+			x--;
+			y--;
 			return *this;
 		}
 
@@ -264,6 +285,14 @@ namespace lcmath
 			return *this;
 		}
 
+		vector3i& operator--()
+		{
+			x--;
+			y--;
+			z--;
+			return *this;
+		}
+
 		bool operator==(vector3i& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
@@ -329,6 +358,14 @@ namespace lcmath
 			return *this;
 		}
 
+		vector3f& operator--()
+		{
+			x--;
+			y--;
+			z--;
+			return *this;
+		}
+
 		bool operator==(vector3f& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
@@ -391,6 +428,14 @@ namespace lcmath
 			x++;
 			y++;
 			z++;
+			return *this;
+		}
+
+		vector3d& operator--()
+		{
+			x--;
+			y--;
+			z--;
 			return *this;
 		}
 
@@ -465,6 +510,15 @@ namespace lcmath
 			return *this;
 		}
 
+		vector4i& operator--()
+		{
+			x--;
+			y--;
+			z--;
+			w--;
+			return *this;
+		}
+
 		bool operator==(vector4i& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
@@ -536,6 +590,15 @@ namespace lcmath
 			return *this;
 		}
 
+		vector4f& operator--()
+		{
+			x--;
+			y--;
+			z--;
+			w--;
+			return *this;
+		}
+
 		bool operator==(vector4f& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
@@ -604,6 +667,15 @@ namespace lcmath
 			y++;
 			z++;
 			w++;
+			return *this;
+		}
+
+		vector4d& operator--()
+		{
+			x--;
+			y--;
+			z--;
+			w--;
 			return *this;
 		}
 
