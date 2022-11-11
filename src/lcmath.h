@@ -115,6 +115,11 @@ namespace lcmath
 			return (x == vec.x && y == vec.y);
 		}
 
+		bool operator!=(vector2i& vec) const
+		{
+			return (x != vec.x && y != vec.y);
+		}
+
 		friend std::ostream& operator<<(std::ostream& out, const vector2i& vec){
 			out << vec.x << ", " << vec.y;
 			return out;
@@ -199,6 +204,11 @@ namespace lcmath
 		bool operator==(vector2f& vec) const
 		{
 			return (x == vec.x && y == vec.y);
+		}
+
+		bool operator!=(vector2f& vec) const
+		{
+			return (x != vec.x && y != vec.y);
 		}
 
 		friend std::ostream& operator<<(std::ostream& out, const vector2f& vec)
@@ -286,6 +296,11 @@ namespace lcmath
 		bool operator==(vector2d& vec) const
 		{
 			return (x == vec.x && y == vec.y);
+		}
+
+		bool operator!=(vector2d& vec) const
+		{
+			return (x != vec.x && y != vec.y);
 		}
 
 		friend std::ostream& operator<<(std::ostream& out, const vector2d& vec)
@@ -385,6 +400,11 @@ namespace lcmath
 			return (x == vec.x && y == vec.y && z == vec.z);
 		}
 
+		bool operator!=(vector3i& vec) const
+		{
+			return (x != vec.x && y != vec.y && z != vec.z);
+		}
+
 		friend std::ostream& operator<<(std::ostream& out, const vector3i& vec)
 		{
 			out << vec.x << ", " << vec.y << ", " << vec.z;
@@ -482,6 +502,11 @@ namespace lcmath
 			return (x == vec.x && y == vec.y && z == vec.z);
 		}
 
+		bool operator!=(vector3f& vec) const
+		{
+			return (x != vec.x && y != vec.y && z != vec.z);
+		}
+
 		friend std::ostream& operator<<(std::ostream& out, const vector3f& vec)
 		{
 			out << vec.x << ", " << vec.y << ", " << vec.z;
@@ -577,6 +602,11 @@ namespace lcmath
 		bool operator==(vector3d& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
+		}
+
+		bool operator!=(vector3d& vec) const
+		{
+			return (x != vec.x && y != vec.y && z != vec.z);
 		}
 
 		friend std::ostream& operator<<(std::ostream& out, const vector3d& vec)
@@ -686,6 +716,11 @@ namespace lcmath
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
 		}
 
+		bool operator!=(vector4i& vec) const
+		{
+			return (x != vec.x && y != vec.y && z != vec.z && w != vec.w);
+		}
+
 		friend std::ostream& operator<<(std::ostream& out, const vector4i& vec)
 		{
 			out << vec.x << ", " << vec.y << ", " << vec.z << ", " << vec.w;
@@ -793,6 +828,11 @@ namespace lcmath
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
 		}
 
+		bool operator!=(vector4f& vec) const
+		{
+			return (x != vec.x && y != vec.y && z != vec.z && w != vec.w);
+		}
+
 		friend std::ostream& operator<<(std::ostream& out, const vector4f& vec)
 		{
 			out << vec.x << ", " << vec.y << ", " << vec.z << ", " << vec.w;
@@ -898,6 +938,11 @@ namespace lcmath
 		bool operator==(vector4d& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
+		}
+
+		bool operator!=(vector4d& vec) const
+		{
+			return (x != vec.x && y != vec.y && z != vec.z && w != vec.w);
 		}
 
 		friend std::ostream& operator<<(std::ostream& out, const vector4d& vec)
