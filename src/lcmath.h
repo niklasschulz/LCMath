@@ -96,6 +96,13 @@ namespace lcmath
 			return *this;
 		}
 
+		vector2i& operator-=(vector2i vec)
+		{
+			x -= vec.x;
+			y -= vec.y;
+			return *this;
+		}
+
 		bool operator==(vector2i& vec) const
 		{
 			return (x == vec.x && y == vec.y);
@@ -165,6 +172,13 @@ namespace lcmath
 		{
 			x += vec.x;
 			y += vec.y;
+			return *this;
+		}
+
+		vector2f& operator-=(vector2f vec)
+		{
+			x -= vec.x;
+			y -= vec.y;
 			return *this;
 		}
 
@@ -238,6 +252,13 @@ namespace lcmath
 		{
 			x += vec.x;
 			y += vec.y;
+			return *this;
+		}
+
+		vector2d& operator-=(vector2d vec)
+		{
+			x -= vec.x;
+			y -= vec.y;
 			return *this;
 		}
 
@@ -322,6 +343,14 @@ namespace lcmath
 			return *this;
 		}
 
+		vector3i& operator-=(vector3i vec)
+		{
+			x -= vec.x;
+			y -= vec.y;
+			z -= vec.z;
+			return *this;
+		}
+
 		bool operator==(vector3i& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
@@ -403,6 +432,14 @@ namespace lcmath
 			return *this;
 		}
 
+		vector3f& operator-=(vector3f vec)
+		{
+			x -= vec.x;
+			y -= vec.y;
+			z -= vec.z;
+			return *this;
+		}
+
 		bool operator==(vector3f& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
@@ -473,6 +510,14 @@ namespace lcmath
 			x--;
 			y--;
 			z--;
+			return *this;
+		}
+
+		vector3d& operator-=(vector3d vec)
+		{
+			x -= vec.x;
+			y -= vec.y;
+			z -= vec.z;
 			return *this;
 		}
 
@@ -573,6 +618,15 @@ namespace lcmath
 			return *this;
 		}
 
+		vector4i& operator-=(vector4i vec)
+		{
+			x -= vec.x;
+			y -= vec.y;
+			z -= vec.z;
+			w -= vec.w;
+			return *this;
+		}
+
 		bool operator==(vector4i& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
@@ -662,6 +716,15 @@ namespace lcmath
 			return *this;
 		}
 
+		vector4f& operator-=(vector4f vec)
+		{
+			x -= vec.x;
+			y -= vec.y;
+			z -= vec.z;
+			w -= vec.w;
+			return *this;
+		}
+
 		bool operator==(vector4f& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
@@ -748,6 +811,15 @@ namespace lcmath
 			y += vec.y;
 			z += vec.z;
 			w += vec.w;
+			return *this;
+		}
+
+		vector4d& operator-=(vector4d vec)
+		{
+			x -= vec.x;
+			y -= vec.y;
+			z -= vec.z;
+			w -= vec.w;
 			return *this;
 		}
 
