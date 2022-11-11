@@ -31,7 +31,6 @@ int	main()
 		std::cout << ":(" << std::endl;
 
 
-
 	int array[5] = {12,1,1,2,3};
 
 	std::cout << lcmath::avg(array, std::end(array)-std::begin(array)) << std::endl;
