@@ -23,6 +23,7 @@ int	main()
 
 	testvector1 = {2,2};
 	testvector2 = {2,2};
+
 	if (testvector2 == testvector1)
 	{
 		testvector3 = testvector1 - testvector2;
