@@ -168,6 +168,83 @@ namespace lcmath
 		}
 	};
 
+	// Vector 4 int
+	struct vector4i
+	{
+		int x, y, z, w;
+
+		vector4i& operator=(vector4i vec)
+		{
+			x = vec.x;
+			y = vec.y;
+			z = vec.z;
+			w = vec.w;
+			return *this;
+		}
+
+		vector4i& operator+(vector4i vec)
+		{
+			x = x + vec.x;
+			y = y + vec.y;
+			z = z + vec.z;
+			w = w + vec.w;
+			return *this;
+		}
+
+		vector4i& operator-(vector4i vec)
+		{
+			x = x - vec.x;
+			y = y - vec.y;
+			z = z - vec.z;
+			w = w - vec.w;
+			return *this;
+		}
+
+		bool operator==(vector4i& vec)
+		{
+			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
+		}
+	};
+
+	// Vector 4 int
+	struct vector4f
+	{
+		int x, y, z, w;
+
+		vector4f& operator=(vector4f vec)
+		{
+			x = vec.x;
+			y = vec.y;
+			z = vec.z;
+			w = vec.w;
+			return *this;
+		}
+
+		vector4f& operator+(vector4f vec)
+		{
+			x = x + vec.x;
+			y = y + vec.y;
+			z = z + vec.z;
+			w = w + vec.w;
+			return *this;
+		}
+
+		vector4f& operator-(vector4f vec)
+		{
+			x = x - vec.x;
+			y = y - vec.y;
+			z = z - vec.z;
+			w = w - vec.w;
+			return *this;
+		}
+
+		bool operator==(vector4f& vec)
+		{
+			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
+		}
+	};
+
+
 
 
 	// Power
