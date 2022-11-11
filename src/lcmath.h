@@ -83,11 +83,18 @@ namespace lcmath
 		return cos;
 	}
 
-	// Rounds number
+	// Rounds number to int
 	template<typename T>
 	int round(T number)
 	{
 		return (int)(number + 0.5);
+	}
+
+	// Rounds number to long int
+	template<typename T>
+	long long int lround(T number)
+	{
+		return (long long int)(number + 0.5);
 	}
 
 	// Rounds number up
@@ -185,8 +192,6 @@ namespace lcmath
 
 		return mid;
 	}
-
-
 
 
 }
