@@ -34,6 +34,142 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 namespace lcmath
 {
+	// Vector 2 int
+	struct vector2i
+	{
+		int x, y;
+
+		vector2i& operator=(vector2i vec)
+		{
+			x = vec.x;
+			y = vec.y;
+			return *this;
+		}
+
+		vector2i& operator+(vector2i vec)
+		{
+			x = x + vec.x;
+			y = y + vec.y;
+			return *this;
+		}
+
+		vector2i& operator-(vector2i vec)
+		{
+			x = x - vec.x;
+			y = y - vec.y;
+			return *this;
+		}
+
+		bool operator==(vector2i& vec)
+		{
+			return (x == vec.x && y == vec.y);
+		}
+	};
+
+	// Vector 2 float
+	struct vector2f
+	{
+		float x, y;
+
+		vector2f& operator=(vector2f vec)
+		{
+			x = vec.x;
+			y = vec.y;
+			return *this;
+		}
+
+		vector2f& operator+(vector2f vec)
+		{
+			x = x + vec.x;
+			y = y + vec.y;
+			return *this;
+		}
+
+		vector2f& operator-(vector2f vec)
+		{
+			x = x - vec.x;
+			y = y - vec.y;
+			return *this;
+		}
+
+		bool operator==(vector2f& vec)
+		{
+			return (x == vec.x && y == vec.y);
+		}
+	};
+
+	// Vector 3 int
+	struct vector3i
+	{
+		int x, y, z;
+
+		vector3i& operator=(vector3i vec)
+		{
+			x = vec.x;
+			y = vec.y;
+			z = vec.z;
+			return *this;
+		}
+
+		vector3i& operator+(vector3i vec)
+		{
+			x = x + vec.x;
+			y = y + vec.y;
+			z = z + vec.z;
+			return *this;
+		}
+
+		vector3i& operator-(vector3i vec)
+		{
+			x = x - vec.x;
+			y = y - vec.y;
+			z = z - vec.z;
+			return *this;
+		}
+
+		bool operator==(vector3i& vec)
+		{
+			return (x == vec.x && y == vec.y && z == vec.z);
+		}
+	};
+
+	// Vector 3 float
+	struct vector3f
+	{
+		float x, y, z;
+
+		vector3f& operator=(vector3f vec)
+		{
+			x = vec.x;
+			y = vec.y;
+			z = vec.z;
+			return *this;
+		}
+
+		vector3f& operator+(vector3f vec)
+		{
+			x = x + vec.x;
+			y = y + vec.y;
+			z = z + vec.z;
+			return *this;
+		}
+
+		vector3f& operator-(vector3f vec)
+		{
+			x = x - vec.x;
+			y = y - vec.y;
+			z = z - vec.z;
+			return *this;
+		}
+
+		bool operator==(vector3f& vec)
+		{
+			return (x == vec.x && y == vec.y && z == vec.z);
+		}
+	};
+
+
+
 	// Power
 	float pow(float base, int exp) {
 		if(exp < 0) {
