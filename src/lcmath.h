@@ -1025,7 +1025,8 @@ namespace lcmath
 	};
 
 	// Power
-	float pow(float base, int exp)
+	template<typename T>
+	T pow(T base, int exp)
 	{
 		if (exp < 0)
 		{
