@@ -60,7 +60,7 @@ namespace lcmath
 			return *this;
 		}
 
-		bool operator==(vector2i& vec)
+		bool operator==(vector2i& vec) const
 		{
 			return (x == vec.x && y == vec.y);
 		}
@@ -92,7 +92,7 @@ namespace lcmath
 			return *this;
 		}
 
-		bool operator==(vector2f& vec)
+		bool operator==(vector2f& vec) const
 		{
 			return (x == vec.x && y == vec.y);
 		}
@@ -127,7 +127,7 @@ namespace lcmath
 			return *this;
 		}
 
-		bool operator==(vector3i& vec)
+		bool operator==(vector3i& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
 		}
@@ -162,7 +162,7 @@ namespace lcmath
 			return *this;
 		}
 
-		bool operator==(vector3f& vec)
+		bool operator==(vector3f& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
 		}
@@ -200,7 +200,7 @@ namespace lcmath
 			return *this;
 		}
 
-		bool operator==(vector4i& vec)
+		bool operator==(vector4i& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
 		}
@@ -238,59 +238,60 @@ namespace lcmath
 			return *this;
 		}
 
-		bool operator==(vector4f& vec)
+		bool operator==(vector4f& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
 		}
 	};
 
-
-
-
 	// Power
-	float pow(float base, int exp) {
-		if(exp < 0) {
-			if(base == 0)
+	float pow(float base, int exp)
+	{
+		if (exp < 0)
+		{
+			if (base == 0)
 				return -0;
 			return 1 / (base * pow(base, (-exp) - 1));
 		}
-		if(exp == 0)
+		if (exp == 0)
 			return 1;
-		if(exp == 1)
+		if (exp == 1)
 			return base;
 		return base * pow(base, exp - 1);
 	}
 
 	// Factorial
-	int fact(int n) {
-		return n <= 0 ? 1 : n * fact(n-1);
+	int fact(int n)
+	{
+		return n <= 0 ? 1 : n * fact(n - 1);
 	}
-
 
 	// Calculate sine
 	double sin(double radians, int iterations = 20)
 	{
 		double t = radians;
 		double sine = t;
-		for ( int a=1; a<iterations; ++a)
+		for (int a = 1; a < iterations; ++a)
 		{
-			double mult = -radians*radians/((2*a+1)*(2*a));
+			double mult = -radians * radians / ((2 * a + 1) * (2 * a));
 			t *= mult;
 			sine += t;
 		}
 		return sine;
 	}
 
-	#define PI 3.14159265359
-	#define TERMS 7
+#define PI 3.14159265359
+#define TERMS 7
 	// Cosine
-	double cos(int deg) {
+	double cos(int deg)
+	{
 		deg %= 360; // make it less than 360
 		double rad = deg * PI / 180;
 		double cos = 0;
 
 		int i;
-		for(i = 0; i < TERMS; i++) { // That's also Taylor series!!
+		for (i = 0; i < TERMS; i++)
+		{ // That's also Taylor series!!
 			cos += pow(-1, i) * pow(rad, 2 * i) / fact(2 * i);
 		}
 		return cos;
@@ -405,6 +406,5 @@ namespace lcmath
 
 		return mid;
 	}
-
 
 }
