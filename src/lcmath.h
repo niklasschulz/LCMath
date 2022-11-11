@@ -53,44 +53,34 @@ namespace lcmath
 		return n <= 0 ? 1 : n * fact(n-1);
 	}
 
-	// Calculates the square root of number
-	template<typename T>
-	T sqrt(T number, T error = 0.00001)
-	{
-		T s = number;
 
-		while ((s - number / s) > error)
+	// Calculate sine
+	double sin(double radians, int iterations = 20)
+	{
+		double t = radians;
+		double sine = t;
+		for ( int a=1; a<iterations; ++a)
 		{
-			s = (s + number / s) / 2;
+			double mult = -radians*radians/((2*a+1)*(2*a));
+			t *= mult;
+			sine += t;
 		}
-		return s;
+		return sine;
 	}
 
-	// Calculates the cubic root of number
-	template<typename T>
-	T cbrt(T number, T error = 0.00001)
-	{
-		T d = 1.0;
-		while (error >= 0)
-		{
-			d = d / 10;
-			error--;
-		}
-		T l = 0.0, u = number;
-		T mid = (l + u) / 2;
-		T cube = mid * mid * mid;
+	#define PI 3.14159265359
+	#define TERMS 7
+	// Cosine
+	double cos(int deg) {
+		deg %= 360; // make it less than 360
+		double rad = deg * PI / 180;
+		double cos = 0;
 
-		while (cube != number && (cube > (number + d) || cube < (number - d)))
-		{
-			if (cube < number)
-				l = mid + d;
-			else
-				u = mid - d;
-			mid = (l + u) / 2;
-			cube = mid * mid * mid;
+		int i;
+		for(i = 0; i < TERMS; i++) { // That's also Taylor series!!
+			cos += pow(-1, i) * pow(rad, 2 * i) / fact(2 * i);
 		}
-
-		return mid;
+		return cos;
 	}
 
 	// Rounds number
@@ -156,32 +146,47 @@ namespace lcmath
 			return number1;
 	}
 
-	// Calculate sine
-	double sin(double radians, int iterations = 20)
+	// Calculates the square root of number
+	template<typename T>
+	T sqrt(T number, T error = 0.00001)
 	{
-		double t = radians;
-		double sine = t;
-		for ( int a=1; a<iterations; ++a)
+		T s = number;
+
+		while ((s - number / s) > error)
 		{
-			double mult = -radians*radians/((2*a+1)*(2*a));
-			t *= mult;
-			sine += t;
+			s = (s + number / s) / 2;
 		}
-		return sine;
+		return s;
 	}
 
-	#define PI 3.14159265359
-	#define TERMS 7
-	// Cosine
-	double cos(int deg) {
-		deg %= 360; // make it less than 360
-		double rad = deg * PI / 180;
-		double cos = 0;
-
-		int i;
-		for(i = 0; i < TERMS; i++) { // That's also Taylor series!!
-			cos += pow(-1, i) * pow(rad, 2 * i) / fact(2 * i);
+	// Calculates the cubic root of number
+	template<typename T>
+	T cbrt(T number, T error = 0.00001)
+	{
+		T d = 1.0;
+		while (error >= 0)
+		{
+			d = d / 10;
+			error--;
 		}
-		return cos;
+		T l = 0.0, u = number;
+		T mid = (l + u) / 2;
+		T cube = mid * mid * mid;
+
+		while (cube != number && (cube > (number + d) || cube < (number - d)))
+		{
+			if (cube < number)
+				l = mid + d;
+			else
+				u = mid - d;
+			mid = (l + u) / 2;
+			cube = mid * mid * mid;
+		}
+
+		return mid;
 	}
+
+
+
+
 }
