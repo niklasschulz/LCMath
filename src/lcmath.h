@@ -584,4 +584,16 @@ namespace lcmath
 		return mid;
 	}
 
+	// Calculates the average value from an array
+	template<typename T>
+	double avg(T array, int arrayLength)
+	{
+
+		double sum = 0;
+		for (int i = 0; i < arrayLength; i++)
+		{
+			sum += array[i];
+		}
+		return sum / arrayLength;
+	}
 }
