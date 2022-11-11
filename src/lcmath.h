@@ -112,6 +112,45 @@ namespace lcmath
 		}
 	};
 
+	// Vector 2 double
+	struct vector2d
+	{
+		float x, y;
+
+		vector2d& operator=(vector2d vec)
+		{
+			x = vec.x;
+			y = vec.y;
+			return *this;
+		}
+
+		vector2d& operator+(vector2d vec)
+		{
+			x = x + vec.x;
+			y = y + vec.y;
+			return *this;
+		}
+
+		vector2d& operator-(vector2d vec)
+		{
+			x = x - vec.x;
+			y = y - vec.y;
+			return *this;
+		}
+
+		vector2d& operator*(vector2d vec)
+		{
+			x = x * vec.x;
+			y = y * vec.y;
+			return *this;
+		}
+
+		bool operator==(vector2d& vec) const
+		{
+			return (x == vec.x && y == vec.y);
+		}
+	};
+
 	// Vector 3 int
 	struct vector3i
 	{
@@ -193,6 +232,49 @@ namespace lcmath
 		}
 
 		bool operator==(vector3f& vec) const
+		{
+			return (x == vec.x && y == vec.y && z == vec.z);
+		}
+	};
+
+	// Vector 3 double
+	struct vector3d
+	{
+		float x, y, z;
+
+		vector3d& operator=(vector3d vec)
+		{
+			x = vec.x;
+			y = vec.y;
+			z = vec.z;
+			return *this;
+		}
+
+		vector3d& operator+(vector3d vec)
+		{
+			x = x + vec.x;
+			y = y + vec.y;
+			z = z + vec.z;
+			return *this;
+		}
+
+		vector3d& operator-(vector3d vec)
+		{
+			x = x - vec.x;
+			y = y - vec.y;
+			z = z - vec.z;
+			return *this;
+		}
+
+		vector3d& operator*(vector3d vec)
+		{
+			x = x * vec.x;
+			y = y * vec.y;
+			z = z * vec.z;
+			return *this;
+		}
+
+		bool operator==(vector3d& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z);
 		}
@@ -287,6 +369,53 @@ namespace lcmath
 		}
 
 		bool operator==(vector4f& vec) const
+		{
+			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
+		}
+	};
+
+	// Vector 4 double
+	struct vector4d
+	{
+		int x, y, z, w;
+
+		vector4d& operator=(vector4d vec)
+		{
+			x = vec.x;
+			y = vec.y;
+			z = vec.z;
+			w = vec.w;
+			return *this;
+		}
+
+		vector4d& operator+(vector4d vec)
+		{
+			x = x + vec.x;
+			y = y + vec.y;
+			z = z + vec.z;
+			w = w + vec.w;
+			return *this;
+		}
+
+		vector4d& operator-(vector4d vec)
+		{
+			x = x - vec.x;
+			y = y - vec.y;
+			z = z - vec.z;
+			w = w - vec.w;
+			return *this;
+		}
+
+		vector4d& operator*(vector4d vec)
+		{
+			x = x * vec.x;
+			y = y * vec.y;
+			z = z * vec.z;
+			w = w * vec.w;
+			return *this;
+		}
+
+		bool operator==(vector4d& vec) const
 		{
 			return (x == vec.x && y == vec.y && z == vec.z && w == vec.w);
 		}
