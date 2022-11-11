@@ -1,4 +1,4 @@
-#include "lcmath.h"
+#include "lcmath.hpp"
 #include "iostream"
 
 int	main()
