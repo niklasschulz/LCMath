@@ -131,7 +131,8 @@ namespace lcmath
 			return (x != vec.x && y != vec.y);
 		}
 
-		friend std::ostream& operator<<(std::ostream& out, const vector2i& vec){
+		friend std::ostream& operator<<(std::ostream& out, const vector2i& vec)
+		{
 			out << vec.x << ", " << vec.y;
 			return out;
 		}
@@ -1115,7 +1116,6 @@ namespace lcmath
 		}
 		return sine;
 	}
-
 
 	// Cosine
 	double cos(int deg)
