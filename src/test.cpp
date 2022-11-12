@@ -1,3 +1,4 @@
+#include <iomanip>
 #include "lcmath.hpp"
 #include "iostream"
 
@@ -45,4 +46,13 @@ int	main()
 	std::cout << "surface area: " << testsphere.getSurface() << std::endl;
 	std::cout << "circumference: " << testsphere.getCircumference() << std::endl;
 	std::cout << "volume: " << testsphere.getVolume() << std::endl;
+
+
+
+	std::cout << " raw   clamped to int8_t   clamped to uint8_t\n";
+	for(int const v: {-129, -128, -1, 0, 42, 127, 128, 255, 256}) {
+		std::cout << std::setw(04) << v
+				  << std::setw(20) << lcmath::clamp(v, INT8_MIN, INT8_MAX)
+				  << std::setw(21) << lcmath::clamp(v, 0, UINT8_MAX) << '\n';
+	}
 }
