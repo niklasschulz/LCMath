@@ -131,6 +131,11 @@ namespace lcmath
 			out << vec.x << ", " << vec.y;
 			return out;
 		}
+
+		int area()
+		{
+			return x * y;
+		}
 	};
 
 	// Vector 2 float
@@ -230,6 +235,11 @@ namespace lcmath
 			out << vec.x << ", " << vec.y;
 			return out;
 		}
+
+		float area()
+		{
+			return x * y;
+		}
 	};
 
 	// Vector 2 double
@@ -328,6 +338,11 @@ namespace lcmath
 		{
 			out << vec.x << ", " << vec.y;
 			return out;
+		}
+
+		double area()
+		{
+			return x * y;
 		}
 	};
 
@@ -439,6 +454,11 @@ namespace lcmath
 			out << vec.x << ", " << vec.y << ", " << vec.z;
 			return out;
 		}
+
+		int volume()
+		{
+			return x * y * z;
+		}
 	};
 
 	// Vector 3 float
@@ -549,6 +569,11 @@ namespace lcmath
 			out << vec.x << ", " << vec.y << ", " << vec.z;
 			return out;
 		}
+
+		float volume()
+		{
+			return x * y * z;
+		}
 	};
 
 	// Vector 3 double
@@ -658,6 +683,11 @@ namespace lcmath
 		{
 			out << vec.x << ", " << vec.y << ", " << vec.z;
 			return out;
+		}
+
+		double volume()
+		{
+			return x * y * z;
 		}
 	};
 

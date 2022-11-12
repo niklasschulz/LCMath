@@ -26,6 +26,8 @@ int	main()
 	testvector1 = {2,2};
 	testvector2 = {2,2};
 
+	std::cout << "area: " << testvector1.area() << std::endl;
+
 	if (testvector2 == testvector1)
 	{
 		testvector3 = testvector1 - testvector2;
@@ -38,6 +40,4 @@ int	main()
 	int array[5] = {12,1,1,2,3};
 
 	std::cout << lcmath::avg(array, std::end(array)-std::begin(array)) << std::endl;
-
-
 }
