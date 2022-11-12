@@ -136,7 +136,7 @@ namespace lcmath
 			return out;
 		}
 
-		int area()
+		int area() const
 		{
 			return x * y;
 		}
@@ -240,7 +240,7 @@ namespace lcmath
 			return out;
 		}
 
-		float area()
+		float area() const
 		{
 			return x * y;
 		}
@@ -344,7 +344,7 @@ namespace lcmath
 			return out;
 		}
 
-		double area()
+		double area() const
 		{
 			return x * y;
 		}
@@ -459,7 +459,7 @@ namespace lcmath
 			return out;
 		}
 
-		int volume()
+		int volume() const
 		{
 			return x * y * z;
 		}
@@ -574,7 +574,7 @@ namespace lcmath
 			return out;
 		}
 
-		float volume()
+		float volume() const
 		{
 			return x * y * z;
 		}
@@ -689,7 +689,7 @@ namespace lcmath
 			return out;
 		}
 
-		double volume()
+		double volume() const
 		{
 			return x * y * z;
 		}
@@ -1063,17 +1063,17 @@ namespace lcmath
 	{
 		double radius;
 
-		double getSurface()
+		double getSurface() const
 		{
 			return 4 * PI * radius * radius;
 		}
 
-		double getCircumference()
+		double getCircumference() const
 		{
 			return 2 * PI * radius;
 		}
 
-		double getVolume()
+		double getVolume() const
 		{
 			return (radius * radius * radius) * (4.0 / 3.0) * PI;
 		}
