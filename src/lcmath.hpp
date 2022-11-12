@@ -33,6 +33,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #pragma once
 
 #include <ostream>
+
+#define PI 3.14159265359
+#define TERMS 7
+
 namespace lcmath
 {
 	// Vector 2 int
@@ -1054,6 +1058,27 @@ namespace lcmath
 		}
 	};
 
+	// Sphere
+	struct sphere
+	{
+		double radius;
+
+		double getSurface()
+		{
+			return 4 * PI * radius * radius;
+		}
+
+		double getCircumference()
+		{
+			return 2 * PI * radius;
+		}
+
+		double getVolume()
+		{
+			return (radius * radius * radius) * (4.0 / 3.0) * PI;
+		}
+	};
+
 	// Power
 	template<typename T>
 	T pow(T base, int exp)
@@ -1091,8 +1116,7 @@ namespace lcmath
 		return sine;
 	}
 
-#define PI 3.14159265359
-#define TERMS 7
+
 	// Cosine
 	double cos(int deg)
 	{

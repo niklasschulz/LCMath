@@ -40,4 +40,9 @@ int	main()
 	int array[5] = {12,1,1,2,3};
 
 	std::cout << lcmath::avg(array, std::end(array)-std::begin(array)) << std::endl;
+
+	lcmath::sphere testsphere{4};
+	std::cout << "surface area: " << testsphere.getSurface() << std::endl;
+	std::cout << "circumference: " << testsphere.getCircumference() << std::endl;
+	std::cout << "volume: " << testsphere.getVolume() << std::endl;
 }
