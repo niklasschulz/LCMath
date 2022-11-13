@@ -1080,6 +1080,23 @@ namespace lcmath
 		}
 	};
 
+	// Cylinder
+	struct cylinder
+	{
+		double radius;
+		double height;
+
+		double getSurface() const
+		{
+			return 2 * PI * radius * height + 2 * (PI * radius * radius);
+		}
+
+		double getVolume() const
+		{
+			return PI * radius * radius * height;
+		}
+	};
+
 	// Power
 	template<typename T>
 	T pow(T base, int exp)

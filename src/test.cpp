@@ -47,6 +47,10 @@ int	main()
 	std::cout << "circumference: " << testsphere.getCircumference() << std::endl;
 	std::cout << "volume: " << testsphere.getVolume() << std::endl;
 
+	std::cout << std::endl;
+	lcmath::cylinder testcyl{3,2};
+	std::cout << "surface area: " << testcyl.getSurface() << std::endl;
+	std::cout << "volume: " << testcyl.getVolume() << std::endl;
 
 
 	std::cout << " raw   clamped to int8_t   clamped to uint8_t\n";
